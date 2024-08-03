@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module app1 {
-	requires spring.context;
-}
