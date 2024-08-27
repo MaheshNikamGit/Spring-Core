@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p ="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="accBean" class="com.spring.beans.Account"
+    p:accNo="xyz9999" p:accName="XYZ" p:accType="Current" p:balance="75000">
+    	<!-- <property name="accNo" value="abc123" />
+    	<property name="accName" value="AAA" />
+    	<property name="accType" value="Savings" />
+    	<property name="balance" value="50000" /> -->
+    </bean>
+    
+    <bean id="empBean" class="com.spring.beans.Employee"
+    p:eid="E-222" p:ename="XYZ" p:esal="35000" p:eaddr="Pune" p:eacc-ref="accBean">
+    	<!-- <property name="eid" value="E-111" />
+    	<property name="ename" value="AAA" />
+    	<property name="esal" value="25000" />
+    	<property name="eaddr" value="Mumbai" />
+    	<property name="eacc" ref="accBean" /> -->
+    </bean>
+ </beans>   
