@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="org.springframework.beans.factory.BeanFactory"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.xml.XmlBeanFactory"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="com.spring.beans.Student"/>
     <fullyQualifiedTypeName name="app7.ThreadScope"/>
     <fullyQualifiedTypeName name="app7.Thread1"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -30,9 +29,11 @@
     <fullyQualifiedTypeName name="com.spring.beans.WishBean"/>
     <fullyQualifiedTypeName name="com.spring.beans.HelloBean"/>
     <fullyQualifiedTypeName name="com.spring.beans.WelcomeBean"/>
-    <fullyQualifiedTypeName name="com.spring.beans.Employee"/>
     <fullyQualifiedTypeName name="com.spring.beans.Account"/>
+    <fullyQualifiedTypeName name="com.spring.beans.Course"/>
+    <fullyQualifiedTypeName name="com.spring.beans.Employee"/>
+    <fullyQualifiedTypeName name="com.spring.beans.Address"/>
     <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
     <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
-    <fullyQualifiedTypeName name="com.spring.beans.Course"/>
+    <fullyQualifiedTypeName name="com.spring.beans.Student"/>
 </qualifiedTypeNameHistroy>

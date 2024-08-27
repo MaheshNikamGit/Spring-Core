@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="addressBean" class="com.spring.beans.Address">
+	<property name="pno" value="23/3rt" />
+	<property name="street" value="MG Road" />
+	<property name="city" value="Pune" />
+	<property name="state" value="Maharashtra" />
+	<property name="country" value="India" />
+</bean>
+
+<bean id="studentBean" class="com.spring.beans.Student">
+	<property name="sid" value="S-111" />
+	<property name="sname" value="Jojo" />
+	<property name="saddr" ref="addressBean" />
+	<property name="squal">
+		<list>
+			<value>BTech</value>
+			<value>MTech</value>
+			<value>PHD</value>
+		</list>
+	</property>
+	<property name="scourses">
+		<set>
+			<value>C</value>
+			<value>C++</value>
+			<value>java</value>
+			<value>Python</value>
+		</set>
+	</property>
+	<property name="scourses_And_Faculty">
+		<map>
+			<entry key="c" value="K.K.Mishra" />
+			<entry key="c++" value="Sharma" />
+			<entry key="java" value="Rathore" />
+			<entry key="python" value="Vikram" />
+		</map>
+	</property>
+	<property name="scourses_And_Cost">
+		<props>
+			<prop key="c">1000</prop>
+			<prop key="c++">2000</prop>
+			<prop key="Java">5000</prop>
+			<prop key="python">7000</prop>
+		</props>
+	</property>
+</bean>
+    
+</beans>    
