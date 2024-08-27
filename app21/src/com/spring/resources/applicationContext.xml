@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:c ="http://www.springframework.org/schema/c"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <!-- Constructor Dependency Injection -->
+    <!-- <bean id="courseBean" class="com.spring.beans.Course">
+    	<constructor-arg name="cid" value="C-111" />
+    	<constructor-arg name="cname" value="Java" />
+    	<constructor-arg name="ccost" value="10000" />
+    </bean> -->
+    
+    <!-- Constructor Dependency Injection -->
+    <bean id="courseBean" class="com.spring.beans.Course" c:_0="C-111">
+    	<constructor-arg name="cname" value="Java" index="1"/>
+    	<constructor-arg name="ccost" value="12000" index="2"/>
+    </bean>
+    
+    
+    <bean id="studentBean" class="com.spring.beans.Student">
+    	<constructor-arg name="sid" value="S-111"/>
+    	<constructor-arg name="sname" value="ABC"/>
+    	<constructor-arg name="saddr" value="Mumbai"/>
+    	<constructor-arg name="course" ref="courseBean"/>
+    </bean>
+    
+    <!-- Constructor Dependency injection using C-Namspace and parameter name -->
+    <bean id="courseBean1" class="com.spring.beans.Course" c:cid="C-222" c:cname="Advance Java" c:ccost="7000"></bean>
+    <bean id="studentBean1" class="com.spring.beans.Student" c:sid="S-222" c:sname="XYZ" c:saddr="Pune" c:course-ref="courseBean1"></bean>
+    
+    
+    <bean id="courseBean2" class="com.spring.beans.Course" c:_0="C-333" c:_1="Spring AND Spring Boot" c:_2="5000"></bean>
+    <bean id="studentBean2" class="com.spring.beans.Student" c:_0="S-333" c:_1="PQR" c:_2="Satara" c:_3-ref="courseBean2"></bean>
+</beans>    
