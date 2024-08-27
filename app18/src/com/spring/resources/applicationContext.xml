@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="studBean" class="com.spring.beans.Student">
+    	<!-- <constructor-arg name="branch" ref="branchBean" /> -->
+    	<property name="branch" ref="branchBean"/>
+    </bean>
+    
+    <bean id="branchBean" class="com.spring.beans.Branch">
+    	<!-- <constructor-arg name="student" ref="studBean" /> -->
+    	<property name="student" ref="studBean" />
+    </bean>
+</beans>    
