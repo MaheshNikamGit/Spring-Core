@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    	http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <context:annotation-config />
+    <bean id="account" class="com.spring.beans.Account">
+    	<property name="accNo" value="abc123" />
+    	<property name="accName" value="Java Spring" />
+    	<property name="accType" value="Savings" />
+    	<property name="balance" value="250000" />
+    </bean>
+    
+    <bean id="account1" class="com.spring.beans.Account">
+    	<property name="accNo" value="xyz123" />
+    	<property name="accName" value="Advance Java" />
+    	<property name="accType" value="Current" />
+    	<property name="balance" value="350000" />
+    </bean>
+    
+    <bean id="employee" class="com.spring.beans.Employee">
+    	<property name="eid" value="E-111" />
+    	<property name="ename" value="Vikrant Rona" />
+    	<property name="esal" value="35000" />
+    	<property name="eaddr" value="Mumbai" />
+    	<!-- <property name="acc" ref="account" /> -->
+    </bean>
+    
+</beans>    
