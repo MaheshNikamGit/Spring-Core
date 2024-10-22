@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="courseBean1" class="com.spring.beans.Course">
+        	<property name="cid" value="C-111" />
+        	<property name="cname" value="Java" />
+        	<property name="ccost" value="5000" />
+        </bean>
+        
+        <bean id="courseBean2" class="com.spring.beans.Course" autowire-candidate="false">
+        	<property name="cid" value="C-222" />
+        	<property name="cname" value="Python" />
+        	<property name="ccost" value="15000" />
+        </bean>
+        
+        <bean id="studentBean" class="com.spring.beans.Student" autowire="byType">
+        	<property name="sid" value="S-111" />
+        	<property name="sname" value="Vikrant" />
+        	<property name="saddr" value="Mumbai" />
+        	<property name="course" ref="courseBean2" />
+        </bean>
+        
+  </beans>      
